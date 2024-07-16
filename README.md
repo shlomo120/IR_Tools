@@ -41,9 +41,9 @@ Ping Castle is a valuable tool for post-hack incident response and security post
 By identifying the initial attack vector, it can prioritize patching and configuration changes to address the root cause. <br/> 
 Ping Castle can help identify systems that might have been compromised beyond the initial breach. <br/> 
 Running Ping Castle after a breach can help demonstrate that you're taking proactive steps to improve security. <br/> 
-Analyzing the results of Ping Castle can help you refine your incident response plan for future incidents. <br/> 
+Analyzing the results of Ping Castle can help to refine your incident response plan for future incidents. <br/> 
 ![Ping Castle](https://www.pingcastle.com/wp/wp-content/uploads/2018/09/ipad1-e1536782462467.png) <br/> 
-Download [Ping Castle](https://www.pingcastle.com/).
+Download [Ping Castle](https://www.pingcastle.com/). <br/> 
 
 ## Common Event Codes <br/> <br/>
 **File System Activity Related Events:** <br/>
