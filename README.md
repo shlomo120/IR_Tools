@@ -1,6 +1,8 @@
 
 # IR_Tools
 
+## QueryList Analysis
+
 This section explains an XML snippet used in Event Viewer queries to filter for successful logon events of a specific user within the past 7 days:
 
 ```
@@ -21,9 +23,34 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 ```
 
 ```<QueryList>```:  Contains all XML queries for Event Viewer. <br/>
-```  <Query Id="0" Path="Security">```: Defines a specific query (ID: 0) targeting the Security log. <br/>
-```    <Select Path="Security">```: Selects all data from the Security log path. <br/>
-```      [System[(EventID='4624')]]```: Selects all events with EventID '4624' (successful logon). <br/>
-```      and System[TimeCreated[timediff(@SystemTime) <= 604800000]]```: Filters events created within the last 7 days (604800000 ticks). <br/>
-```      and EventData[Data[@Name='TargetUserName']='user']```: Filters events for a specific username (user). Replace "user" with the desired username. <br/>
-```      and EventData[Data[@Name='LogonType']='2']```: Filters events for interactive logon type ('2'). <br/>
+```<Query Id="0" Path="Security">```: Defines a specific query (ID: 0) targeting the Security log. <br/>
+```<Select Path="Security">```: Selects all data from the Security log path. <br/>
+```System[(EventID='4624')]```: Selects all events with EventID '4624' (successful logon). <br/>
+```System[TimeCreated[timediff(@SystemTime) <= 604800000]]```: Filters events created within the last 7 days (604800000 ticks). <br/>
+```EventData[Data[@Name='TargetUserName']='user']```: Filters events for a specific username (user). Replace "user" with the desired username. <br/>
+```EventData[Data[@Name='LogonType']='2']```: Filters events for interactive logon type ('2'). <br/>
+
+## Common Event Codes <br/> <br/>
+**File System Activity Related Events:** <br/>
+* 4660: An object has been deleted. <br/>
+* 4661: An object was accessed. <br/>
+* 4662: An object was opened. <br/>
+* 4663: A new file has been created. <br/>
+* 4656: A handle to an object has been requested. This event can indicate file access attempts. <br/> <br/>
+**Privilege and Security Policy Changes:** <br/>
+* 4624: An account was successfully logged on. <br/>
+* 4634: An account was logged off. <br/>
+* 4672: A special privilege has been assigned to a new process. This could indicate potential privilege escalation. <br/>
+* 4673: A privilege was used (process uses a special privilege). <br/>
+* 4674: A special privilege has been revoked from a process. <br/> <br/>
+**Process and Network Related Events** <br/>
+* 4688: A new process has been created. This event can be used to track process creation and potential malicious activity. <br/>
+* 4689: A group membership has been changed. This indicates changes to user or group privileges and can be a sign of potential security policy modifications. <br/>
+* 4717: A system security policy was changed. <br/>
+* 4719: A user account was enabled. <br/>
+* 4720: A user account was disabled. <br/>
+* 4728: A directory service object (like user) was created in Active Directory. <br/> 
+* 4729: A directory service object (like user) was modified in Active Directory.<br/> 
+* 4730: A directory service object (like user) was deleted in in Active Directory <br/>
+
+
