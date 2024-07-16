@@ -30,6 +30,10 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 ```EventData[Data[@Name='TargetUserName']='user']```: Filters events for a specific username (user). Replace "user" with the desired username. <br/>
 ```EventData[Data[@Name='LogonType']='2']```: Filters events for interactive logon type ('2'). <br/>
 
+## Logon Types: <br/> <br/>
+![Logon Types](https://github.com/shlomo120/IR_Tools/blob/687cc421ca23207c129ee34f7bd4d7d6a4846a64/Logon%20Types.png)
+
+
 ## Common Event Codes <br/> <br/>
 **File System Activity Related Events:** <br/>
 * 4660: An object has been deleted. <br/>
@@ -52,5 +56,8 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 * 4728: A directory service object (like user) was created in Active Directory. <br/> 
 * 4729: A directory service object (like user) was modified in Active Directory.<br/> 
 * 4730: A directory service object (like user) was deleted in in Active Directory <br/>
+
+
+
 
 
