@@ -31,8 +31,10 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 ```EventData[Data[@Name='LogonType']='2']```: Filters events for interactive logon type ('2'). <br/>
 
 ## Logon Types: <br/> <br/>
-![Logon Types](https://github.com/shlomo120/IR_Tools/blob/687cc421ca23207c129ee34f7bd4d7d6a4846a64/Logon%20Types.png)
+![Logon Types](https://github.com/shlomo120/IR_Tools/blob/687cc421ca23207c129ee34f7bd4d7d6a4846a64/Logon%20Types.png) <br/> 
+Referenes: Microsoft Documentation, [Administrative tools and logon types](https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types).
 
+<br/><br/>
 
 ## Common Event Codes <br/> <br/>
 **File System Activity Related Events:** <br/>
