@@ -26,7 +26,7 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 ```<Query Id="0" Path="Security">```: Defines a specific query (ID: 0) targeting the Security log. <br/>
 ```<Select Path="Security">```: Selects all data from the Security log path. <br/>
 ```System[(EventID='4624')]```: Selects all events with EventID '4624' (successful logon). <br/>
-```System[TimeCreated[timediff(@SystemTime) <= 604800000]]```: Filters events created within the last 7 days (604800000 ticks, A single tick represents one hundred nanoseconds or one ten-millionth of a second.). <br/>
+```System[TimeCreated[timediff(@SystemTime) <= 604800000]]```: Filters events created within the last 7 days (604800000 ticks, A single tick represents one hundred nanoseconds or one ten-millionth of a second). <br/>
 ```EventData[Data[@Name='TargetUserName']='user']```: Filters events for a specific username (user). Replace "user" with the desired username or remove for all users . <br/>
 ```EventData[Data[@Name='LogonType']='2']```: Filters events for interactive logon type ('2'). <br/>
 
@@ -34,7 +34,16 @@ This section explains an XML snippet used in Event Viewer queries to filter for 
 ![Logon Types](https://github.com/shlomo120/IR_Tools/blob/687cc421ca23207c129ee34f7bd4d7d6a4846a64/Logon%20Types.png) <br/> 
 Referenes: Microsoft Documentation, [Administrative tools and logon types](https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types).
 
-<br/><br/>
+<br/>
+
+## Ping Castle <br/> <br/> 
+Ping Castle is a valuable tool for post-hack incident response and security posture assessment. <br/> 
+By identifying the initial attack vector, it can prioritize patching and configuration changes to address the root cause. <br/> 
+Ping Castle can help identify systems that might have been compromised beyond the initial breach. <br/> 
+Running Ping Castle after a breach can help demonstrate that you're taking proactive steps to improve security. <br/> 
+Analyzing the results of Ping Castle can help you refine your incident response plan for future incidents. <br/> 
+![Ping Castle](https://www.pingcastle.com/wp/wp-content/uploads/2018/09/ipad1-e1536782462467.png) <br/> 
+Download [Ping Castle](https://www.pingcastle.com/).
 
 ## Common Event Codes <br/> <br/>
 **File System Activity Related Events:** <br/>
